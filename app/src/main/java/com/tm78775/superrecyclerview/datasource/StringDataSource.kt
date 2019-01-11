@@ -8,15 +8,17 @@ class StringDataSource(items: List<String>? = null): SuperDataSource<String>() {
     }
 
     override fun getItemIndex(item: String): Int {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return dataSource.indexOf(item)
     }
 
     override fun removeItem(item: String) {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val index = dataSource.indexOf(item)
+        if(index > -1)
+            dataSource.removeAt(index)
     }
 
     override fun sort() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        // not implemented.
     }
 
 }

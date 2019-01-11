@@ -1,11 +1,11 @@
 package com.tm78775.superrecyclerview.recyclerview
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
 import android.util.AttributeSet
 import android.util.Log
+import androidx.recyclerview.widget.RecyclerView
 
-class SuperRecyclerView: RecyclerView {
+open class SuperRecyclerView: RecyclerView {
 
     //region Private Variables
 
@@ -63,7 +63,7 @@ class SuperRecyclerView: RecyclerView {
     /**
      * This method provides an API allowing the implementation to "reset" the onBottomReachedCallback
      * flag. Once this flag has been reset, then the onBottomReached method will be called when the
-     * recyclerview once again reaches the bottom of the screen.
+     * RecyclerView once again reaches the bottom of the screen.
      */
     fun onAdditionalItemsLoaded() {
         onBottomOfRecyclerViewCalled = false
@@ -71,7 +71,9 @@ class SuperRecyclerView: RecyclerView {
 
     /**
      * This method provides an API allowing the implementation to add a bottom listener to this
-     * RecyclerView.
+     * RecyclerView. When the RecyclerView gets to the bottom of the screen, it will call this method
+     * ONLY ONCE. After new items have been loaded and the onAdditionalItemsLoaded method has been called,
+     * then the onBottomListener will be invoked again upon reaching the bottom of the newly added data.
      */
     fun setOnBottomListener(callback: (() -> Unit)?) {
         onBottomListenerCallback = callback

@@ -1,13 +1,12 @@
 package com.tm78775.superrecyclerview
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import android.widget.Button
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.tm78775.superrecyclerview.adapter.StringAdapter
 import com.tm78775.superrecyclerview.adapter.SuperAdapter
 import com.tm78775.superrecyclerview.datasource.StringDataSource
@@ -54,7 +53,6 @@ class MainActivity : AppCompatActivity() {
 
     private fun loadMoreItems() {
 
-
         val r = Runnable {
             val items = ArrayList<String>()
             for (index in 0 until 20)
@@ -64,6 +62,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         val h = Handler()
-        h.postDelayed(r, 3500)
+        h.postDelayed(r, 1500)
     }
 }

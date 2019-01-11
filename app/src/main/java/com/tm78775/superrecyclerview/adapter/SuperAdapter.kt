@@ -1,6 +1,6 @@
 package com.tm78775.superrecyclerview.adapter
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import com.tm78775.superrecyclerview.datasource.SuperDataSource
 
 abstract class SuperAdapter<T>: RecyclerView.Adapter<RecyclerView.ViewHolder>() {

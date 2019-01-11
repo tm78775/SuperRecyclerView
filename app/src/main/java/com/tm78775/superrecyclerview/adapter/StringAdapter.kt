@@ -1,8 +1,8 @@
 package com.tm78775.superrecyclerview.adapter
 
-import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.tm78775.superrecyclerview.R
 import com.tm78775.superrecyclerview.viewholder.MyViewHolder
 
