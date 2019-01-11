@@ -19,7 +19,8 @@ abstract class SuperAdapter<T>: RecyclerView.Adapter<RecyclerView.ViewHolder>() 
         if(dataSource == null)
             return
 
-        val start = dataSource!!.getItemCount().minus(1)
+        val start = dataSource!!.getItemCount()
+        dataSource!!.addPageOfItems(items)
         notifyItemRangeInserted(start, items.count())
     }
 
